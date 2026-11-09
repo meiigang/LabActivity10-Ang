@@ -2,11 +2,20 @@
 
 namespace App\Models;
 
+use Database\Factories\AuthorFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
-    /** @use HasFactory<\Database\Factories\AuthorFactory> */
+    /** @use HasFactory<AuthorFactory> */
     use HasFactory;
+
+    protected $fillable = ['name', 'position', 'email'];
+
+    protected $casts = [
+        'is_published' => 'boolean',
+        'is_pinned' => 'boolean',
+        'published_at' => 'datetime',
+    ];
 }
