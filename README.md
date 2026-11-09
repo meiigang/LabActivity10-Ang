@@ -7,6 +7,25 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Lab Activity
+
+This project is a Barangay Bulletin for Purok Ang. Published posts can be
+searched by title and filtered by category, with six posts per page. Six is
+the required minimum because my surname, Ang, has three letters. The custom
+category is `Event`, and the pinned birthday post is dated August 8, 2026.
+
+### Running the project
+
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate:fresh --seed
+npm install
+npm run dev
+php artisan serve
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
